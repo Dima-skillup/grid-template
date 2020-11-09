@@ -606,7 +606,7 @@ a {
 }
 
 .header-navbar__link:hover {
-  color: #d66926;
+  color: red;
 }
 
 .header-navbar__btn {
