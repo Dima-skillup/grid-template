@@ -830,26 +830,21 @@ a {
 
 .about {
   letter-spacing: 0.055em;
-  padding-top: 100px;
-  padding-bottom: 100px;
   background-color: #e5e5e5;
 }
 
 .about__container {
   display: grid;
-  grid-template-columns: 1fr 271px;
   grid-gap: 100px;
-}
-
-.about__content {
-  font-size: 1.125rem;
+  grid-template-columns: 1fr 271px;
 }
 
 .about__content h2 {
-  color: #2d3651;
-  letter-spacing: 0.085em;
   margin-top: 0;
   margin-bottom: 56px;
+  letter-spacing: 0.085em;
+  line-height: 1.2em;
+  color: #2d3651;
   font-size: 2.5rem;
 }
 
@@ -858,13 +853,25 @@ a {
 }
 
 .about__content p:first-of-type::after {
+  margin-top: -5px;
   position: absolute;
-  right: -50px;
   top: 0;
+  right: -50px;
   width: 2px;
   height: 200px;
   content: "";
   background-color: rgba(68, 89, 110, 0.1);
+}
+
+.about__content p:last-of-type {
+  margin: 0;
+}
+
+.about__image {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
 }
 
 .about__image img {
@@ -913,6 +920,10 @@ a {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     grid-template-columns: repeat(4, 1fr);
   }
+  .about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 @media (max-width: 991.8px) {
@@ -936,6 +947,20 @@ a {
     grid-gap: 10px;
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
     grid-template-columns: repeat(3, 1fr);
+  }
+  .about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .about__container {
+    grid-gap: 40px;
+  }
+  .about__content h2 {
+    margin-bottom: 42px;
+    font-size: 2rem;
+  }
+  .about__content p:first-of-type::after {
+    right: -20px;
   }
 }
 
@@ -968,6 +993,10 @@ a {
   .skill-item__title {
     font-size: 1.125rem;
   }
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
@@ -975,6 +1004,18 @@ a {
     grid-gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
     grid-template-columns: repeat(2, 1fr);
+  }
+  .about__container {
+    grid-gap: 20px;
+    grid-template-columns: 1fr 236px;
+  }
+  .about__content h2 {
+    letter-spacing: 0.1em;
+    font-size: 1.5rem;
+    margin-bottom: 36px;
+  }
+  .about__content p:first-of-type::after {
+    right: -10px;
   }
 }
 
@@ -1002,5 +1043,14 @@ a {
     grid-gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     grid-template-columns: 1fr;
+  }
+  .about__container {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .about__content h2 {
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 1.5rem;
   }
 }
