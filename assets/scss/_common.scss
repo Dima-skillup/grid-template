@@ -3,14 +3,14 @@
 }
 
 html {
-  overflow-y: scroll;
-
   color: $color-gray;
+  @include sm {
+    overflow-x: hidden;
+  }
 
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
-
 
 @mixin lg-min {
   @media (min-width: $lg) {
@@ -19,7 +19,7 @@ html {
 }
 
 @mixin lg-md {
-  @media(max-width: $lg - 0.2 ) and (min-width: $md) {
+  @media (max-width: $lg - 0.2) and (min-width: $md) {
     @content;
   }
 }
@@ -51,8 +51,6 @@ h1 {
   }
 }
 
-
-
 a {
   text-decoration: none;
 
@@ -63,7 +61,7 @@ a {
 .btn-accent {
   display: block;
 
-  padding: 18px  $gap;
+  padding: 18px $gap;
 
   transition: background-color 0.5s;
   text-align: center;
@@ -99,7 +97,6 @@ a {
     padding-bottom: 9px;
   }
 }
-
 
 .btn-accent {
   height: 60px;
