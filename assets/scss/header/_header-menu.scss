@@ -1,9 +1,6 @@
 .header-menu {
-  position: absolute;
+  @include abs-position($top: 0, $right: 0, $bottom: 0, $left: 0);
   z-index: 1;
-  top: 0;
-  right: 0;
-  left: 0;
 
   width: 100%;
 
@@ -19,5 +16,3 @@
     grid-template-columns: auto 1fr;
   }
 }
-
-

@@ -1,15 +1,15 @@
 .posts {
   @include lg-min {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: $gap * 5;
+    padding-bottom: $gap * 5;
   }
   @include lg-md {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: $gap * 4;
+    padding-bottom: $gap * 4;
   }
   @include md {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: $gap * 3;
+    padding-bottom: $gap * 3;
   }
 
   &__container {
@@ -21,19 +21,19 @@
 
       @include lg-min {
         font-size: 2.5rem;
-        margin-bottom: 56px;
+        margin-bottom: $gap * 2.8;
       }
       @include lg-md {
         font-size: 2rem;
-        margin-bottom: 42px;
+        margin-bottom: $gap + 2;
       }
       @include md-sm {
         font-size: 1.5rem;
-        margin-bottom: 36px;
+        margin-bottom: $gap * 1.8;
       }
       @include sm {
         font-size: 1.5rem;
-        margin-bottom: 36px;
+        margin-bottom: $gap * 1.8;
         text-align: center;
       }
     }
@@ -111,7 +111,7 @@
   }
   &__caption {
     display: grid;
-    padding: 20px;
+    padding: $gap;
     align-content: center;
     background-color: rgba($color-gray-light, 0.3);
     transition: background-color 0.5s;
