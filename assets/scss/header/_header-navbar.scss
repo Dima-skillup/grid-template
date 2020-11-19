@@ -1,10 +1,8 @@
-
 .header-navbar {
   display: grid;
   justify-content: end;
 
   letter-spacing: 0.1em;
-
 
   &__list {
     @include unlist(0 (-$gap) 0 0);
@@ -13,7 +11,7 @@
     }
     @include md {
       position: absolute;
-      top: 100%;
+      top: 10%;
       right: $gap * 2;
 
       display: none;
@@ -28,7 +26,7 @@
     padding: $gap;
 
     letter-spacing: 0.088em;
-    transition: .5s color;
+    transition: 0.5s color;
     font-size: 1.125rem;
     &:hover {
       color: $color-accent;
@@ -103,12 +101,6 @@
   }
 }
 
-
-
-
-
-
-
 //  .header-navbar__btn-row:nth-child(2),
 //  .header-navbar__btn-row:nth-child(3) {
 //    top: 9px;
@@ -139,7 +131,3 @@
 //    width: 0%;
 //    left: 50%;
 //  }
-
-
-
-
