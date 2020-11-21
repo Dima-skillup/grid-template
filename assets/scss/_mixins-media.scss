@@ -183,3 +183,17 @@
     @content;
   }
 }
+
+// Для height
+
+@mixin h-max {
+  @media (max-height: 690px) {
+    @content;
+  }
+}
+
+@mixin h-min {
+  @media (min-height: 691px) {
+    @content;
+  }
+}

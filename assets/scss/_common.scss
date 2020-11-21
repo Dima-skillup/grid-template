@@ -4,25 +4,12 @@
 
 html {
   color: $color-gray;
-  @include sm {
-    overflow-x: hidden;
-  }
 
   font-family: "Roboto", sans-serif;
   font-size: $font-size;
 }
 
 h1 {
-  text-align: center;
-  letter-spacing: 0.08em;
-
-  color: $color-light;
-
-  font-size: "Roboto Slab", serif;
-  font-size: 3.75rem;
-  font-weight: 300;
-  line-height: 1.2;
-
   @include lg-min {
     font-size: 3.75rem;
   }

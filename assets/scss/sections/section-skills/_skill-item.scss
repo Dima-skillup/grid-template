@@ -2,6 +2,12 @@
   position: relative;
 
   overflow: hidden;
+  @include h-max {
+    min-height: calc(230px - 20px * 0.66);
+  }
+  @include h-min {
+    min-height: calc(33.33vh - 20px * 0.66);
+  }
 
   &:hover .skill-item {
     &__overlay {

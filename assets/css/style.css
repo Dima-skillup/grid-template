@@ -481,16 +481,6 @@ html {
   font-size: 16px;
 }
 
-h1 {
-  text-align: center;
-  letter-spacing: 0.08em;
-  color: #ffffff;
-  font-size: "Roboto Slab", serif;
-  font-size: 3.75rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
 a {
   text-decoration: none;
   color: #ffffff;
@@ -538,6 +528,7 @@ a {
   background-image: url("../img/img-header.png");
   background-position: 50% 50%;
   background-size: cover;
+  color: #fff;
 }
 
 .header-overlay {
@@ -553,8 +544,6 @@ a {
 .header-menu {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   z-index: 1;
   width: 100%;
@@ -679,8 +668,11 @@ a {
 }
 
 .header-content__title {
-  margin: 0 0 53px 0;
+  font-family: "Roboto Slab", serif;
   text-align: center;
+  letter-spacing: 0.08em;
+  font-weight: 300;
+  line-height: 1.2em;
 }
 
 .header-content__buttons {
@@ -703,7 +695,6 @@ a {
 .skills__container {
   display: grid;
   margin-bottom: 20px;
-  grid-auto-rows: calc(33.333vh - 13.333px);
 }
 
 .skills__button {
@@ -1162,6 +1153,12 @@ a {
   }
 }
 
+@media (min-height: 691px) {
+  .skill-item {
+    min-height: calc(33.33vh - 20px * 0.66);
+  }
+}
+
 @media (min-width: 768px) {
   .header-navbar__list {
     display: -webkit-box;
@@ -1184,6 +1181,9 @@ a {
     min-width: 250px;
     padding-top: 18px;
     padding-bottom: 18px;
+  }
+  .header-content__title {
+    margin: 0 0 53px;
   }
   .skills__container {
     grid-gap: 10px;
@@ -1219,14 +1219,14 @@ a {
     padding-bottom: 14px;
     font-size: 1rem;
   }
-  .header-content__title {
-    margin: 0 0 43px 0;
-  }
 }
 
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
+  }
+  .header-content__title {
+    margin: 0 0 43px;
   }
   .skills__container {
     grid-gap: 10px;
@@ -1288,7 +1288,7 @@ a {
     display: block;
   }
   .header-content__title {
-    margin: 0 0 33px 0;
+    margin: 0 0 33px;
   }
   .skill-item__title {
     font-size: 1.125rem;
@@ -1337,10 +1337,13 @@ a {
   }
 }
 
-@media (max-width: 575.8px) {
-  html {
-    overflow-x: hidden;
+@media (max-height: 690px) {
+  .skill-item {
+    min-height: calc(230px - 20px * 0.66);
   }
+}
+
+@media (max-width: 575.8px) {
   .btn-accent {
     width: 100%;
   }
