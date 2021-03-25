@@ -9,6 +9,9 @@ html {
   font-size: $font-size;
 }
 
+body, html {
+  overflow-x: hidden;
+}
 h1 {
   @include lg-min {
     font-size: 3.75rem;
