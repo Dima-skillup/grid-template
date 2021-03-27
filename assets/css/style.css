@@ -982,10 +982,6 @@ a {
           justify-content: center;
 }
 
-.posts__button .btn-accent {
-  min-width: 350px;
-}
-
 .post-item__link {
   display: grid;
   overflow: hidden;
