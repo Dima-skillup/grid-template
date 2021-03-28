@@ -1278,7 +1278,7 @@ a {
   }
   .header-navbar__list {
     position: absolute;
-    top: 68%;
+    top: 100%;
     right: 40px;
     display: none;
     background-color: rgba(68, 89, 110, 0.9);
